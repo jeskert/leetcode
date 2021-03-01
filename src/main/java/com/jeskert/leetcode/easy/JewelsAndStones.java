@@ -1,0 +1,13 @@
+package com.jeskert.leetcode.easy;
+
+public class JewelsAndStones {
+    public int numJewelsInStones(String jewels, String stones) {
+        int res = 0;
+        for (int i = 0; i < stones.length(); i++) {
+            if (jewels.contains(String.valueOf(stones.charAt(i)))) {
+                res += 1;
+            }
+        }
+        return res;
+    }
+}
