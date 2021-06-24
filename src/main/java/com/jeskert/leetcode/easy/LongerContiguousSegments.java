@@ -2,28 +2,19 @@ package com.jeskert.leetcode.easy;
 
 public class LongerContiguousSegments {
     public boolean checkZeroOnes(String s) {
-        int mx0 = 0;
-        int mx1 = 1;
-        char prev = '#';
-        int cnt = 0;
-        for (char ch : s.toCharArray()) {
-            if (ch == prev) {
-                cnt++;
+        int len1 = 0, len0 = 0;
+        int max1 = 0, max0 = 0;
+        for (char c : s.toCharArray()) {
+            if (c == '0') {
+                len0++;
+                len1 = 0;
             } else {
-                if (prev == 0) {
-                    mx0 = Math.max(mx0, cnt);
-                } else if (prev == 1) {
-                    mx1 = Math.max(mx1, cnt);
-                }
-                cnt = 1;
+                len1++;
+                len0 = 0;
             }
-            prev = ch;
+            max1 = Math.max(len1, max1);
+            max0 = Math.max(len0, max0);
         }
-        if (prev == '0') {
-            mx0 = Math.max(mx0, cnt);
-        } else if (prev == '1') {
-            mx1 = Math.max(mx1, cnt);
-        }
-        return mx0 < mx1;
+        return max1 > max0;
     }
 }

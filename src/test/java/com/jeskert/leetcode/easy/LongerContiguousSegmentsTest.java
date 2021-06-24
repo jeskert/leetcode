@@ -12,5 +12,6 @@ public class LongerContiguousSegmentsTest {
         assertTrue(longerContiguousSegments.checkZeroOnes("1101"));
         assertFalse(longerContiguousSegments.checkZeroOnes("111000"));
         assertFalse(longerContiguousSegments.checkZeroOnes("110100010"));
+        assertTrue(longerContiguousSegments.checkZeroOnes("01111110"));
     }
 }
