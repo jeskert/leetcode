@@ -1,4 +1,4 @@
-package com.jeskert.leetcode.easy;
+package com.jeskert.leetcode.medium;
 
 public class JumpGameII {
     public int jump(int[] nums) {

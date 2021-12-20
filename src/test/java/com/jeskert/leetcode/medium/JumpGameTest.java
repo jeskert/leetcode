@@ -1,4 +1,4 @@
-package com.jeskert.leetcode.easy;
+package com.jeskert.leetcode.medium;
 
 import org.junit.Test;
 
