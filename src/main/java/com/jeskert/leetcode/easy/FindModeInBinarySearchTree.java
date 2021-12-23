@@ -18,9 +18,8 @@ public class FindModeInBinarySearchTree {
                     maxTimes = currentTimes;
                 }
             }
-
-
         }
+        return null;
     }
 
     void traverse(TreeNode root, List<Integer> result) {
