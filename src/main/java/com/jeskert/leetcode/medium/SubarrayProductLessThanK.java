@@ -12,8 +12,8 @@ public class SubarrayProductLessThanK {
             pow *= nums[right];
             while (pow >= k) {
                 pow /= nums[left++];
-                ans += right - left + 1;
             }
+            ans += right - left + 1;
         }
         return ans;
     }
