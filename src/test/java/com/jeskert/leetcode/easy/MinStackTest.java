@@ -13,9 +13,9 @@ public class MinStackTest {
         minStack.push(0);
         minStack.push(-3);
 
-        assertEquals(-3, minStack.min());
+        assertEquals(-3, minStack.getMin());
         minStack.pop();
         assertEquals(0, minStack.top());
-        assertEquals(-2, minStack.min());
+        assertEquals(-2, minStack.getMin());
     }
 }
