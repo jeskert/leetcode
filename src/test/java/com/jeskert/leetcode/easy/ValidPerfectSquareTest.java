@@ -13,5 +13,6 @@ public class ValidPerfectSquareTest {
         assertFalse(validPerfectSquare.isPerfectSquare(14));
         assertTrue(validPerfectSquare.isPerfectSquare(1));
         assertTrue(validPerfectSquare.isPerfectSquare(4));
+        assertTrue(validPerfectSquare.isPerfectSquare(808201));
     }
 }
