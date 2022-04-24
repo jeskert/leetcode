@@ -9,7 +9,7 @@ public class CountNegativeNumbersInSortedMatrixTest {
 
     @Test
     public void test1() {
-        assertEquals(8, countNegativeNumbersInSortedMatrix.countNegatives(new int[][]{{4, 3, 2, 1}, {3, 2, 1, -1}, {1, 1, -1, -2}, {-1, -1, -2, -3}}));
+        assertEquals(8, countNegativeNumbersInSortedMatrix.countNegatives(new int[][]{{4, 3, 2, -1}, {3, 2, 1, -1}, {1, 1, -1, -2}, {-1, -1, -2, -3}}));
         assertEquals(0, countNegativeNumbersInSortedMatrix.countNegatives(new int[][]{{3, 2}, {1, 0}}));
     }
 }
