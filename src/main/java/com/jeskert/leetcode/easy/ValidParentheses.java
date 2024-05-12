@@ -5,22 +5,21 @@ import java.util.Stack;
 public class ValidParentheses {
     public boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
-        stack.push(s.charAt(0));
-        for (int i = 1; i < s.length(); i++) {
-            if (!stack.isEmpty() && isPair(stack.peek(), s.charAt(i))) {
-                stack.pop();
-            } else {
-                stack.push(s.charAt(i));
+        for (Character c : s.toCharArray()) {
+            if (c == '{' || c == '(' || c == '[') {
+                stack.push(c);
+            }
+            else if (c == '}' || c == ')' || c == ']') {
+                if (stack.isEmpty()) {
+                    return false;
+                } else {
+                    Character top = stack.pop();
+                    if ((c == '}' && top != '{') || (c == ')' && top != '(') || (c == ']' && top != '[')) {
+                        return false;
+                    }
+                }
             }
         }
         return stack.isEmpty();
-    }
-
-    private boolean isPair(char a, char b) {
-        if (a == '{' && b == '}') {
-            return true;
-        } else if (a == '(' && b == ')') {
-            return true;
-        } else return a == '[' && b == ']';
     }
 }

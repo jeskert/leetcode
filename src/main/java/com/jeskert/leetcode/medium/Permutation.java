@@ -17,11 +17,11 @@ public class Permutation {
             return;
         }
 
-        for (int i = 0; i < nums.length; i++) {
-            if (track.contains(nums[i])) {
+        for (int num : nums) {
+            if (track.contains(num)) {
                 continue;
             }
-            track.add(nums[i]);
+            track.add(num);
             backtrack(nums, track);
             track.removeLast();
         }
